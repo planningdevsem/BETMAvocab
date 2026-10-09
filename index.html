@@ -1,9 +1,71 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>BETMA Vocabulary Lab</title>
-<link rel="icon" type="image/png" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/icon-192.png"><meta name="theme-color" content="#D3222B"><link rel="stylesheet" href="css/style.css"></head><body>
-<header><a class="logo" href="#/"><img src="assets/logo.png" alt="BETMA ENGLISH"><div><b>Vocabulary Lab</b><small>Beginner to Master</small></div></a><nav aria-label="Điều hướng chính"><a href="#/" id="n1">Học tập</a><a href="#/review" id="n2">Ôn tập</a></nav><div id="who" class="who"></div></header>
-<main id="app" tabindex="-1"></main><div id="toast" role="status" aria-live="polite"></div>
-<dialog id="dlg"><p></p><div class="row" style="justify-content:flex-end"><button class="btn" onclick="dlg.close('no')">Hủy</button><button class="btn p ok" onclick="dlg.close('ok')">OK</button></div></dialog>
-<script src="js/config.js"></script>
-<script src="js/data.js"></script>
-<script src="js/app.js"></script>
-</body></html>
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>BETMA Vocabulary Lab</title>
+  <meta name="description" content="Nền tảng tự học từ vựng TOEIC cùng BETMA ENGLISH.">
+  <meta name="theme-color" content="#D3222B">
+
+  <!-- Tài nguyên nằm trực tiếp tại thư mục gốc -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#/" aria-label="BETMA Vocabulary Lab">
+      <img src="./logo.png" alt="BETMA ENGLISH">
+
+      <div>
+        <b>Vocabulary Lab</b>
+        <small>Beginner to Master</small>
+      </div>
+    </a>
+
+    <nav aria-label="Điều hướng chính">
+      <a href="#/" id="n1">Học tập</a>
+      <a href="#/review" id="n2">Ôn tập</a>
+    </nav>
+
+    <!-- Hiển thị người dùng sau khi đăng ký -->
+    <div id="who" class="who"></div>
+  </header>
+
+  <!-- Khu vực ứng dụng được JavaScript hiển thị -->
+  <main id="app" tabindex="-1"></main>
+
+  <!-- Thông báo -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Hộp thoại xác nhận -->
+  <dialog id="dlg">
+    <p></p>
+
+    <div class="row" style="justify-content:flex-end">
+      <button
+        class="btn"
+        onclick="document.getElementById('dlg').close('no')"
+      >
+        Hủy
+      </button>
+
+      <button
+        class="btn p ok"
+        onclick="document.getElementById('dlg').close('ok')"
+      >
+        OK
+      </button>
+    </div>
+  </dialog>
+
+  <!-- Nạp JavaScript theo đúng thứ tự -->
+  <script src="./config.js"></script>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+```
